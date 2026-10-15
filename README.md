@@ -97,6 +97,12 @@ cd altior-browser && pnpm start
 git clone https://github.com/ltorl/altior-browser.git && cd altior-browser && pnpm install --dangerously-allow-all-builds && pnpm start & open http://localhost:8080
 ```
 
+### Temporary
+```bash
+tmpdir="$(mktemp -d)" && git clone --depth 1 https://github.com/ltorl/altior-browser.git "$tmpdir/app" && cd "$tmpdir/app" && corepack pnpm install --dangerously-allow-all-builds && corepack pnpm start
+```
+
+<br>
 <br>
 
 ## Server Deployments:
