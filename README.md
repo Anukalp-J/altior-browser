@@ -99,7 +99,7 @@ git clone https://github.com/ltorl/altior-browser.git && cd altior-browser && pn
 
 ### Temporary
 ```bash
-tmpdir="$(mktemp -d)" && git clone --depth 1 https://github.com/ltorl/altior-browser.git "$tmpdir/app" && cd "$tmpdir/app" && corepack pnpm install --dangerously-allow-all-builds && corepack pnpm start
+tmpdir="$(mktemp -d)" && trap 'rm -rf "$tmpdir"' EXIT HUP INT TERM && git clone --depth 1 https://github.com/ltorl/altior-browser.git "$tmpdir/app" && cd "$tmpdir/app" && corepack pnpm install --dangerously-allow-all-builds && corepack pnpm start
 ```
 
 <br>
